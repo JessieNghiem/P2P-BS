@@ -57,7 +57,7 @@ Register_Class(BeaconReply);
 
 BeaconReply::BeaconReply(const char *name, int kind) : ::ApplPkt(name,kind)
 {
-    //take(&(this->peerLocation_var));
+//    take(&(this->peerLocation_var));
     this->peerDistance_var = 0;
     this->timeStamp_var = 0;
     this->srcNetworkAddress_var = 0;
@@ -65,13 +65,13 @@ BeaconReply::BeaconReply(const char *name, int kind) : ::ApplPkt(name,kind)
 
 BeaconReply::BeaconReply(const BeaconReply& other) : ::ApplPkt(other)
 {
-    //take(&(this->peerLocation_var));
+//    take(&(this->peerLocation_var));
     copy(other);
 }
 
 BeaconReply::~BeaconReply()
 {
-    //drop(&(this->peerLocation_var));
+//    drop(&(this->peerLocation_var));
 }
 
 BeaconReply& BeaconReply::operator=(const BeaconReply& other)
@@ -85,7 +85,7 @@ BeaconReply& BeaconReply::operator=(const BeaconReply& other)
 void BeaconReply::copy(const BeaconReply& other)
 {
     this->peerLocation_var = other.peerLocation_var;
-    //this->peerLocation_var.setName(other.peerLocation_var.getName());
+//    this->peerLocation_var.setName(other.peerLocation_var.getName());
     this->peerDistance_var = other.peerDistance_var;
     this->timeStamp_var = other.timeStamp_var;
     this->srcNetworkAddress_var = other.srcNetworkAddress_var;

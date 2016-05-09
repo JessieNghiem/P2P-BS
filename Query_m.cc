@@ -59,20 +59,20 @@ Query::Query(const char *name, int kind) : ::ApplPkt(name,kind)
 {
     this->businessName_var = 0;
     this->businessType_var = 0;
-    //take(&(this->peerLocation_var));
+ //   take(&(this->peerLocation_var));
     this->maxRange_var = 0;
     this->timeStamp_var = 0;
 }
 
 Query::Query(const Query& other) : ::ApplPkt(other)
 {
-    //take(&(this->peerLocation_var));
+//    take(&(this->peerLocation_var));
     copy(other);
 }
 
 Query::~Query()
 {
-    //drop(&(this->peerLocation_var));
+//    drop(&(this->peerLocation_var));
 }
 
 Query& Query::operator=(const Query& other)
@@ -89,7 +89,7 @@ void Query::copy(const Query& other)
     this->businessType_var = other.businessType_var;
     this->keyWords_var = other.keyWords_var;
     this->peerLocation_var = other.peerLocation_var;
-    //this->peerLocation_var.setName(other.peerLocation_var.getName());
+//    this->peerLocation_var.setName(other.peerLocation_var.getName());
     this->maxRange_var = other.maxRange_var;
     this->timeStamp_var = other.timeStamp_var;
 }

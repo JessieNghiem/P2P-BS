@@ -50,6 +50,7 @@
 //#include <cQueue.h>
 
 Define_Module(BSApp);
+
 // Constructor
 BSApp::BSApp() :
         BaseApplLayer(), delayTimer(NULL), beaconExpiredTimer(NULL), queryExpiredTimer(
@@ -135,7 +136,7 @@ void BSApp::initialize(int stage) {
                //}
 
                // if there is no index file, create index files
-               if (!(std::ifstream(lexiconPath) && std::ifstream(documentMapPath) && std::ifstream(invertedListPath))) {//index file does not exist
+               //if (!(std::ifstream(lexiconPath) && std::ifstream(documentMapPath) && std::ifstream(invertedListPath))) {//index file does not exist
                    string indexFolder = MAIN_INDEXING_PATH + std::to_string(node_id);
                    WATCH(indexFolder);
                    cout<<"index folder of BS:" << indexFolder<<endl;
@@ -154,7 +155,7 @@ void BSApp::initialize(int stage) {
                    indexDataset.writeFile(index->lexicon, docMap, lexiconPath, invertedListPath, documentMapPath);
                    docMap.clear();
                    delete index;
-               }
+               //}
 
                // Initial output file
                score = new QueryScore(lexiconPath, documentMapPath, invertedListPath,

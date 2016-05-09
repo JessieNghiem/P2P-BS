@@ -57,20 +57,20 @@ Register_Class(Beacon);
 
 Beacon::Beacon(const char *name, int kind) : ::ApplPkt(name,kind)
 {
-    //take(&(this->srcPosition_var));
+//    take(&(this->srcPosition_var));
     this->timeStamp_var = 0;
     this->srcNetworkAddress_var = 0;
 }
 
 Beacon::Beacon(const Beacon& other) : ::ApplPkt(other)
 {
-    //take(&(this->srcPosition_var));
+//    take(&(this->srcPosition_var));
     copy(other);
 }
 
 Beacon::~Beacon()
 {
-    //drop(&(this->srcPosition_var));
+//    drop(&(this->srcPosition_var));
 }
 
 Beacon& Beacon::operator=(const Beacon& other)
@@ -84,7 +84,7 @@ Beacon& Beacon::operator=(const Beacon& other)
 void Beacon::copy(const Beacon& other)
 {
     this->srcPosition_var = other.srcPosition_var;
-    //this->srcPosition_var.setName(other.srcPosition_var.getName());
+//    this->srcPosition_var.setName(other.srcPosition_var.getName());
     this->timeStamp_var = other.timeStamp_var;
     this->srcNetworkAddress_var = other.srcNetworkAddress_var;
 }
